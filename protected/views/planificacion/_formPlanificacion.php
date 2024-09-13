@@ -140,19 +140,23 @@
 		</div> -->
 
 
-        </div>
-        <div class="panel">
+        </div >
+        
                 <?php echo "<h3>Firmas de Responsabilidad</h3>"; ?>
-		<div class="span-8 last">
+		<!-- <div class="span-8 last">
 		<?php echo $form->labelEx($model,'pla_firma_supervisado'); ?>
 		<?php echo $form->textField($model, 'pla_firma_supervisado', array('maxlength' => 80,'size' => 80)); ?>
 		<?php echo $form->error($model,'pla_firma_supervisado'); ?>
-		</div><!-- row -->
+		</div>
+
+
 		<div class="span-8 last">
 		<?php echo $form->labelEx($model,'pla_pie_supervisado'); ?>
 		<?php echo $form->textField($model, 'pla_pie_supervisado', array('maxlength' => 80,'size' => 80,'style' => 'text-transform: uppercase')); ?>
 		<?php echo $form->error($model,'pla_pie_supervisado'); ?>
-		</div><!-- row -->
+		</div> -->
+
+
 		<div class="span-8 last">
 		<?php echo $form->labelEx($model,'pla_fecha'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(

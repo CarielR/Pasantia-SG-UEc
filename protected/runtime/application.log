@@ -337,3 +337,205 @@ Stack trace:
 REQUEST_URI=/sg-uec/index.php?r=planificacion/create
 HTTP_REFERER=http://localhost/sg-uec/index.php?r=planificacion/create
 ---
+2024/09/13 17:06:01 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CActiveForm::labelEx(), 1 passed in C:\xampp\htdocs\sg-uec\protected\views\planificacion\_formPlanificacion.php on line 20 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php:599
+Stack trace:
+#0 C:\xampp\htdocs\sg-uec\protected\views\planificacion\_formPlanificacion.php(20): CActiveForm->labelEx(','pla_programa'')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\sg-uec\protected\views\planificacion\create.php(17): CController->renderPartial('_formPlanificac...', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php(136): CController->render('create', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PlanificacionController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('planificacion/c...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\sg-uec\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/sg-uec/index.php?r=planificacion/create
+HTTP_REFERER=http://localhost/sg-uec/index.php?r=planificacion/adminPlanificacion
+---
+2024/09/13 17:15:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pla_codigo' in 'where clause'. La sentencia SQL ejecutada fue: SELECT * FROM `empresa` `t` WHERE pla_codigo=39.
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (139)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:15:45 [error] [exception.CDbException] CDbException: CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pla_codigo' in 'where clause'. The SQL statement executed was: SELECT * FROM `empresa` `t` WHERE pla_codigo=39 in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php(139): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: PlanificacionController->actionUpdatePlanificacion('39')
+#5 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs(Object(PlanificacionController), Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PlanificacionController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('updatePlanifica...')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('planificacion/u...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\sg-uec\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+HTTP_REFERER=http://localhost/sg-uec/index.php?r=planificacion/adminPlanificacion
+---
+2024/09/13 17:20:08 [error] [php] Undefined variable: emp (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:163)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (163)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:20:36 [error] [php] Undefined variable: emp (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:163)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (163)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:21:04 [error] [php] Undefined variable: emp (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:163)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (163)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:21:08 [error] [exception.CHttpException.400] CHttpException: Su solicitud es inválida. in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('updatePlanifica...')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('planificacion/u...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\sg-uec\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion
+---
+2024/09/13 17:21:14 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "planificacion7" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('planificacion7')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sg-uec\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sg-uec/index.php?r=planificacion7
+---
+2024/09/13 17:21:36 [error] [php] Undefined variable: emp (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:163)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=38
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (163)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:21:49 [error] [php] Undefined variable: emp (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:163)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=37
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (163)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:23:21 [error] [php] Trying to get property 'emp_firma_jefe' of non-object (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:163)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (163)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:23:57 [error] [php] Trying to get property 'emp_codigo' of non-object (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:163)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (163)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:26:27 [error] [php] Trying to get property 'emp_codigo' of non-object (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:164)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (164)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/09/13 17:26:50 [error] [php] Trying to get property 'emp_codigo' of non-object (C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php:164)
+Stack trace:
+#0 unknown(0): PlanificacionController->actionUpdatePlanificacion()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): PlanificacionController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): PlanificacionController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PlanificacionController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\sg-uec\index.php(13): CWebApplication->run()
+REQUEST_URI=/sg-uec/index.php?r=planificacion/updatePlanificacion&id=39
+in C:\xampp\htdocs\sg-uec\protected\controllers\PlanificacionController.php (164)
+in C:\xampp\htdocs\sg-uec\index.php (13)

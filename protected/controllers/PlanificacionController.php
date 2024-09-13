@@ -69,8 +69,6 @@ class PlanificacionController extends GxController {
                     $model->pla_modificado_por=Yii::app()->user->name;
                     $model->pla_fecha_creacion=date("Y-m-d");
                     $model->pla_fecha_modificacion=date("Y-m-d");  
-                    $model->pla_certificacion_presupuestaria = 0;
-                    $model->pla_instructivo = 0;
 
                      //DatosGenerales
                     $model->pla_certificacion_presupuestaria = 0;
@@ -82,6 +80,18 @@ class PlanificacionController extends GxController {
                     //PanelAdministrativo
                     $model->pla_presupuesto = 0;
                     $model->pla_disposiciones = 0;
+                    $empresa = new Empresa;
+                    $criteria2=new CDbCriteria;
+                    $criteria2->addCondition('emp_codigo = 1');
+
+                    // Ejecutar la consulta en el modelo 'Empresa'
+                    $empresa = Empresa::model()->findAll($criteria2);
+                    $model->pla_firma_supervisado = $empresa[0]->emp_firma_jefe;
+                    $model->pla_pie_supervisado = $empresa[0]->emp_pie_jefe;
+
+                    
+                    
+
                       
                         
 			if ($model->save()) {
@@ -129,6 +139,9 @@ class PlanificacionController extends GxController {
                     $criteria=new CDbCriteria;
                     $criteria->addCondition('pla_codigo='.$id);
                     $planificacion = Planificacion::model()->findAll($criteria);
+                    
+                    
+
                 if ($planificacion[0]->pla_creado_por == null){
                         $model = new Planificacion;
                         $model->pla_creado_por=Yii::app()->user->name;
@@ -148,13 +161,14 @@ class PlanificacionController extends GxController {
                         $comando = Yii::app() -> db -> createCommand($sql);
                         $comando -> execute();
                     }
-                
+       
 		$model = $this->loadModel($id, 'Planificacion');
-
+        
+        
 
 		if (isset($_POST['Planificacion'])) {
 			$model->attributes = $_POST['Planificacion'];
-
+            
 			if ($model->save()) {
                             //Registrar los datos de la Planificación al Curso
                             

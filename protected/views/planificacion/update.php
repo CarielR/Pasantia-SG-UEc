@@ -15,6 +15,6 @@ $this->menu = array(
 <h1><?php echo Yii::t('app', 'Actualizar'); ?> Planificacion #<?php echo GxHtml::encode(GxHtml::valueEx($model)); ?></h1>
 
 <?php
-$this->renderPartial('_form', array(
+$this->renderPartial('_formPlanificacion', array(
 		'model' => $model));
 ?>
