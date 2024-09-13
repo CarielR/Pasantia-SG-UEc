@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="CrugeAccessControlFilter.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeAuthManager.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeException.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeFactory.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeMailer.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeTranslator.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeUi.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeUiAccessControlFilter.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeUser.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeUserManager.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeUtil.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeWebUser.php" server="webltga.espe.edu.ec//var/www/html/sg-ecp/" local="129990509140000000" remote="129996298550000000" />
+<file name="CrugeAccessControlFilter.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236940000000" />
+<file name="CrugeAuthManager.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236940000000" />
+<file name="CrugeException.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236940000000" />
+<file name="CrugeFactory.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236940000000" />
+<file name="CrugeMailer.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+<file name="CrugeTranslator.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+<file name="CrugeUi.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+<file name="CrugeUiAccessControlFilter.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+<file name="CrugeUser.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+<file name="CrugeUserManager.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+<file name="CrugeUtil.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+<file name="CrugeWebUser.php" server="webltga.espe.edu.ec//var/www/html/sg-rad/" local="129990509140000000" remote="130251236950000000" />
+</dwsync>
