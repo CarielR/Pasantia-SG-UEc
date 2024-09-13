@@ -1,6 +1,7 @@
 <?php
 $this->breadcrumbs = array(
 	//'Planificacions' => array('index'),
+        //HEMEAQUI LA PRUEBA DEL GIT 
 	Yii::t('app', 'Ver'),
 );
 
