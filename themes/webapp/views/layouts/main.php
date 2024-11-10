@@ -97,7 +97,13 @@
                             array('label'=>'Estado de Inscripción', 'url'=>array('/estadoInscripcion/admin'),
                                             'visible'=>Yii::app()->user->checkAccess("menu_mantenimiento_EstadoInscripcion")), 
                             array('label'=>'Docentes', 'url'=>array('/docente/admin'),
-					    'visible'=>Yii::app()->user->checkAccess("menu_mantenimiento_Docentes")), 
+					    'visible'=>Yii::app()->user->checkAccess("menu_mantenimiento_Docentes")),
+
+                        array('label'=>'Actividades', 'url'=>array('/temario/admin'),
+					    'visible'=>Yii::app()->user->checkAccess("menu_mantenimiento_Temario")),
+
+
+
                     )), //Fin de array Menu Mantenimiento
                     array('label'=>'Administrar Usuarios', 'url'=>Yii::app()->user->ui->userManagementAdminUrl
                                     , 'visible'=>Yii::app()->user->checkAccess("menu_administrar_usuarios")),

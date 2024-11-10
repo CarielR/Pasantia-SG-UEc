@@ -21,13 +21,28 @@
 	</div>
 
 	<div class="span-8 last">
-		<?php echo $form->label($model, 'asi_porcentaje'); ?>
-		<?php echo $form->textField($model, 'asi_porcentaje', array('maxlength' => 10,'size' => 10)); ?>
+		<?php echo $form->label($model, 'asi_fecha'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'asi_fecha',
+			'value' => $model->asi_fecha,
+			'options' => array(
+				'showButtonPanel' => true,
+				'changeYear' => true,
+				'dateFormat' => 'yy-mm-dd',
+				),
+			));
+; ?>
+	</div>
+
+	<div class="span-8 last">
+		<?php echo $form->label($model, 'asi_asistencia'); ?>
+		<?php echo $form->dropDownList($model, 'asi_asistencia', array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="span-8 last">
 		<?php echo $form->label($model, 'asi_observacion'); ?>
-		<?php echo $form->textField($model, 'asi_observacion', array('maxlength' => 45,'size' => 45)); ?>
+		<?php echo $form->textField($model, 'asi_observacion', array('maxlength' => 100,'size' => 80)); ?>
 	</div>
 
 	<div class="row buttons">

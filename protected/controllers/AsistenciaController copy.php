@@ -3,19 +3,16 @@
 class AsistenciaController extends GxController {
 
     public function obtenerAsistencia($cur_codigo, $ein_codigo, $fecha) {
-        $sql = "SELECT a.cur_codigo, c.cur_nombre, p.par_codigo, p.par_cedula_participante, 
+        $sql = "SELECT c.cur_codigo, c.cur_nombre, p.par_codigo, p.par_cedula_participante, 
                        p.par_nombre_participante, p.par_apellido_participante, a.asi_fecha,
-                       a.asi_asistencia,
                        a.asi_observacion
-                       
-                FROM asistencia a
-                JOIN inscripcion i ON a.ins_codigo = i.ins_codigo
-                JOIN participante p ON a.par_codigo = p.par_codigo
-                JOIN cursos c ON a.cur_codigo = c.cur_codigo
-                WHERE a.cur_codigo = :cur_codigo
+                FROM cursos c
+                JOIN inscripcion i ON c.cur_codigo = i.cur_codigo
+                JOIN participante p ON i.par_codigo = p.par_codigo
+                LEFT JOIN asistencia a ON i.ins_codigo = a.ins_codigo AND i.cur_codigo = a.cur_codigo AND a.asi_fecha = :fecha
+                WHERE c.cur_codigo = :cur_codigo
                   AND i.ein_codigo = :ein_codigo
-                  AND a.asi_fecha = :fecha
-                ORDER BY p.par_apellido_participante, p.par_nombre_participante, a.asi_fecha;";
+                ORDER BY p.par_apellido_participante, p.par_nombre_participante, a.asi_fecha";
 
         $comando = Yii::app()->db->createCommand($sql);
         $comando->bindParam(':cur_codigo', $cur_codigo, PDO::PARAM_INT);
@@ -38,81 +35,33 @@ class AsistenciaController extends GxController {
             throw new CHttpException(400, 'Parámetro curso inválido.');
         }
 
-        $cur_codigo = $id;  // Obtener código del curso desde la URL
-        $ein_codigo = 2;    // Código de inscripción (valor ejemplo)
-        $fecha = isset($_POST['fecha']) ? $_POST['fecha'] : date('Y-m-d'); // Fecha seleccionada o actual
+        if (isset($_POST['Asistencia'])) {
+            foreach ($_POST['Asistencia'] as $asistenciaData) {
+                $asistencia = new Asistencia();
+                $asistencia->attributes = $asistenciaData;
+                $asistencia->cur_codigo = $id;
 
-        // Inicializar resultados
-        $resultado = null;
-        $asistencia_existe = false;
-
-        // Verificar asistencia
-        if (isset($_POST['consultar'])) {
-            // Ejecutar la verificación
-            $asistencia_existe = $this->verificarAsistencia($cur_codigo, $ein_codigo, $fecha);
-
-            if ($asistencia_existe) {
-                // Solo si existe asistencia, hacer la consulta
-                $resultado = $this->obtenerAsistencia($cur_codigo, $ein_codigo, $fecha);
+                if ($asistencia->validate()) {
+                    $asistencia->save();
+                }
             }
+            $this->redirect(array('adminAsistencia', 'id' => $id));
         }
 
-        // Guardar cambios en asistencia
-        if (isset($_POST['Asistencia'])) {
-            foreach ($_POST['Asistencia'] as $par_codigo => $asistenciaData) {
-                // Buscar el registro existente
-                $asistencia = Asistencia::model()->findByAttributes([
-                    'par_codigo' => $par_codigo,
-                    'asi_fecha' => $fecha,
-                    'cur_codigo' => $cur_codigo,
-                ]);
+        $cur_codigo = $id;  // Obtener código del curso desde la URL
+        $ein_codigo = 2;    // Código de inscripción (valor ejemplo)
+        $fecha = date('Y-m-d'); // Fecha actual por defecto
+        $resultado = $this->obtenerAsistencia($cur_codigo, $ein_codigo, $fecha);
 
-                if ($asistencia === null) {
-                    // Si no existe, crea uno nuevo
-                    $asistencia = new Asistencia();
-                    $asistencia->par_codigo = $par_codigo;
-                    $asistencia->asi_fecha = $fecha;
-                    $asistencia->cur_codigo = $cur_codigo; // Asignar el código de curso
-                }
-
-                // Actualizar la asistencia y la observación
-                $asistencia->asi_asistencia = isset($asistenciaData['asi_asistencia']) ? 1 : 0;
-                $asistencia->asi_observacion = $asistenciaData['asi_observacion'];
-                $asistencia->save();
-            }
-
-            // Redirigir después de guardar
-            $this->redirect(array('create', 'id' => $cur_codigo, 'fecha' => $fecha));
+        if (empty($resultado)) {
+            Yii::log('No se encontraron registros de asistencia.', CLogger::LEVEL_WARNING);
+        } else {
+            Yii::log('Registros encontrados: ' . print_r($resultado, true), CLogger::LEVEL_INFO);
         }
 
         $this->render('create', array(
             'resultado' => $resultado,
-            'fecha' => $fecha,
-            'asistencia_existe' => $asistencia_existe, // Pasar el resultado de la verificación a la vista
         ));
-    }
-
-    // Función para verificar asistencia
-    private function verificarAsistencia($cur_codigo, $ein_codigo, $fecha) {
-        $sql = "SELECT COUNT(*) AS asistencia_existe
-                FROM cursos c
-                JOIN inscripcion i ON c.cur_codigo = i.cur_codigo
-                JOIN participante p ON i.par_codigo = p.par_codigo
-                LEFT JOIN asistencia a ON i.ins_codigo = a.ins_codigo 
-                    AND i.cur_codigo = a.cur_codigo
-                    AND a.asi_fecha = :fecha
-                WHERE c.cur_codigo = :cur_codigo
-                  AND i.ein_codigo = :ein_codigo
-                  AND a.asi_fecha = :fecha";
-
-        $comando = Yii::app()->db->createCommand($sql);
-        $comando->bindParam(':cur_codigo', $cur_codigo, PDO::PARAM_INT);
-        $comando->bindParam(':ein_codigo', $ein_codigo, PDO::PARAM_INT);
-        $comando->bindParam(':fecha', $fecha, PDO::PARAM_STR);
-
-        $resultado = $comando->queryRow();
-        
-        return $resultado['asistencia_existe'] > 0; // Retorna true si existen registros
     }
 
     public function actionUpdate($id) {
@@ -127,11 +76,7 @@ class AsistenciaController extends GxController {
 
         if (isset($_POST['consultar'])) {
             // Consultar asistencia para la fecha seleccionada
-            $asistencia_existe = $this->verificarAsistencia($cur_codigo, $ein_codigo, $fecha);
-            if ($asistencia_existe) {
-                // Solo si existe asistencia, hacer la consulta
-                $resultado = $this->obtenerAsistencia($cur_codigo, $ein_codigo, $fecha);
-            }
+            $resultado = $this->obtenerAsistencia($cur_codigo, $ein_codigo, $fecha);
         } elseif (isset($_POST['generar'])) {
             // Lógica para generar asistencia en la fecha seleccionada
             $resultado = $this->obtenerAsistencia($cur_codigo, $ein_codigo, $fecha);

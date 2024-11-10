@@ -13,7 +13,10 @@ $this->menu = array(
 <h1><?php echo Yii::t('app', 'Crear'); ?> Asistencia</h1>
 
 <?php
-$this->renderPartial('_form', array(
-		'model' => $model,
+$this->renderPartial('viewAsistencia', array(
+		
+		'resultado' => $resultado,
+		'fecha' => $fecha,
+        'asistencia_existe' => $asistencia_existe,
 		'buttons' => 'create'));
 ?>

@@ -5,7 +5,7 @@ $this->breadcrumbs = array(
 );
 
 $this->menu = array(
-	array('label' => Yii::t('app', 'Listar') . ' Temario', 'url'=>array('index')),
+	array('label' => Yii::t('app', 'Listar') . ' Temario', 'url'=>array('adminTemario')),
 	array('label' => Yii::t('app', 'Crear') . ' Temario', 'url'=>array('create')),
 	array('label' => Yii::t('app', 'Ver') . ' Temario', 'url'=>array('view', 'id' => GxActiveRecord::extractPkValue($model, true))),
 	//array('label' => Yii::t('app', 'Gestionar') . ' Temario', 'url'=>array('admin')),

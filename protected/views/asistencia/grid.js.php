@@ -8,48 +8,42 @@ xtype:"grid",
 			header:"Column 1",
 			sortable:true,
 			resizable:true,
-                        dataIndex:'asi_codigo',
-			
+                        <?echo "dataIndex:" . $this->generateGridViewColumn($this->modelClass, $column).",\n";?>			
 			width:100
 		},
                                 {
 			header:"Column 1",
 			sortable:true,
 			resizable:true,
-                        dataIndex:array(
-				'name'=>'ins_codigo',
-				'value'=>'GxHtml::valueEx($data->insCodigo)',
-				'filter'=>GxHtml::listDataEx(Inscripcion::model()->findAllAttributes(null, true)),
-				),
-			
+                        <?echo "dataIndex:" . $this->generateGridViewColumn($this->modelClass, $column).",\n";?>			
 			width:100
 		},
                                 {
 			header:"Column 1",
 			sortable:true,
 			resizable:true,
-                        dataIndex:array(
-				'name'=>'cur_codigo',
-				'value'=>'GxHtml::valueEx($data->curCodigo)',
-				'filter'=>GxHtml::listDataEx(Cursos::model()->findAllAttributes(null, true)),
-				),
-			
+                        <?echo "dataIndex:" . $this->generateGridViewColumn($this->modelClass, $column).",\n";?>			
 			width:100
 		},
                                 {
 			header:"Column 1",
 			sortable:true,
 			resizable:true,
-                        dataIndex:'asi_porcentaje',
-			
+                        <?echo "dataIndex:" . $this->generateGridViewColumn($this->modelClass, $column).",\n";?>			
 			width:100
 		},
                                 {
 			header:"Column 1",
 			sortable:true,
 			resizable:true,
-                        dataIndex:'asi_observacion',
-			
+                        <?echo "dataIndex:" . $this->generateGridViewColumn($this->modelClass, $column).",\n";?>			
+			width:100
+		},
+                                {
+			header:"Column 1",
+			sortable:true,
+			resizable:true,
+                        <?echo "dataIndex:" . $this->generateGridViewColumn($this->modelClass, $column).",\n";?>			
 			width:100
 		},
                 		

@@ -41,20 +41,35 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 $sRutaTema = Yii::app()->baseUrl . '/images/';
 $campoClave='tem_codigo';
 $botones = array('class' => 'CButtonColumn',
-    'template' => '{actividad}{informe}',
+    'template' => '{actividad}{informe}{notas}{asistencia}',
     'buttons' => array
         (
         'actividad' => array
             (
                 'label' => Yii::t('int', 'actividad'),
-                'url' => 'Yii::app()->createUrl("actividades/updateActividades",array("id"=>$data->'.$campoClave.'))',
+                'url' => 'Yii::app()->createUrl("temario/update",array("id"=>$data->'.$campoClave.'))',
                 'imageUrl' => $sRutaTema . "actividad.png",),
         'informe' => array
             (
                 'label' => Yii::t('int', 'informe'),
                 'url' => 'Yii::app()->createUrl("informeFinal/createInforme",array("id"=>$data->'.$campoClave.'))',
                 'imageUrl' => $sRutaTema . "informe_final.png",),
-        )
+        
+		'notas' => array
+            (
+                'label' => Yii::t('int', 'notas'),
+                'url' => 'Yii::app()->createUrl("notas/createNotas",array("id"=>$data->'.$campoClave.'))',
+                'imageUrl' => $sRutaTema . "notas.png",),
+        
+		'asistencia' => array
+            (
+                'label' => Yii::t('int', 'asistencia'),
+                'url' => 'Yii::app()->createUrl("asistencia/create",array("id"=>$data->'.$campoClave.'))',
+                'imageUrl' => $sRutaTema . "RegAsist.png",),
+        		
+		
+		
+		)
 );
 ?>
 

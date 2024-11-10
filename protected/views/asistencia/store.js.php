@@ -21,7 +21,12 @@ jun.configstore = Ext.extend(Ext.data.JsonStore, {
 				'value'=>'GxHtml::valueEx($data->curCodigo)',
 				'filter'=>GxHtml::listDataEx(Cursos::model()->findAllAttributes(null, true)),
 				)},
-{name:'asi_porcentaje'},
+{name:'asi_fecha'},
+{name:array(
+					'name' => 'asi_asistencia',
+					'value' => '($data->asi_asistencia === 0) ? Yii::t(\'app\', \'No\') : Yii::t(\'app\', \'Yes\')',
+					'filter' => array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')),
+					)},
 {name:'asi_observacion'},
                 
             ]

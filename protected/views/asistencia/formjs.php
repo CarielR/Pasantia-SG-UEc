@@ -31,13 +31,28 @@ jun.pengajuanUi = Ext.extend(Ext.Window, {
                     <?php echo $form->error($model,'cur_codigo'); ?>
                     
                                                                     
-                    <?php echo $form->labelEx($model,'asi_porcentaje'); ?>
-                    <?php echo $form->textField($model, 'asi_porcentaje', array('maxlength' => 10,'size' => 10)); ?>
-                    <?php echo $form->error($model,'asi_porcentaje'); ?>
+                    <?php echo $form->labelEx($model,'asi_fecha'); ?>
+                    <?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'asi_fecha',
+			'value' => $model->asi_fecha,
+			'options' => array(
+				'showButtonPanel' => true,
+				'changeYear' => true,
+				'dateFormat' => 'yy-mm-dd',
+				),
+			));
+; ?>
+                    <?php echo $form->error($model,'asi_fecha'); ?>
+                    
+                                                                    
+                    <?php echo $form->labelEx($model,'asi_asistencia'); ?>
+                    <?php echo $form->checkBox($model, 'asi_asistencia'); ?>
+                    <?php echo $form->error($model,'asi_asistencia'); ?>
                     
                                                                     
                     <?php echo $form->labelEx($model,'asi_observacion'); ?>
-                    <?php echo $form->textField($model, 'asi_observacion', array('maxlength' => 45,'size' => 45)); ?>
+                    <?php echo $form->textField($model, 'asi_observacion', array('maxlength' => 100,'size' => 80)); ?>
                     <?php echo $form->error($model,'asi_observacion'); ?>
                     
                                                     {

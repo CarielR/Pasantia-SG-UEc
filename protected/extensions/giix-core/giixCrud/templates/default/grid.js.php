@@ -17,7 +17,7 @@ xtype:"grid",
                         <?echo "dataIndex:" . $this->generateGridViewColumn($this->modelClass, $column).",\n";?>			
 			width:100
 		},
-                <?
+                <?php
                 
         }
         if ($count >= 7)

@@ -12,11 +12,12 @@
  * @property integer $asi_codigo
  * @property integer $ins_codigo
  * @property integer $cur_codigo
- * @property string $asi_porcentaje
+ * @property string $asi_fecha
+ * @property integer $asi_asistencia
  * @property string $asi_observacion
  *
- * @property Cursos $curCodigo
  * @property Inscripcion $insCodigo
+ * @property Cursos $curCodigo
  */
 abstract class BaseAsistencia extends GxActiveRecord {
 
@@ -29,24 +30,24 @@ abstract class BaseAsistencia extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'asi_porcentaje';
+		return 'asi_fecha';
 	}
 
 	public function rules() {
 		return array(
-			array('asi_porcentaje, asi_observacion', 'required'),
-			array('ins_codigo, cur_codigo', 'numerical', 'integerOnly'=>true),
-			array('asi_porcentaje', 'length', 'max'=>10),
-			array('asi_observacion', 'length', 'max'=>45),
-			array('ins_codigo, cur_codigo, asi_porcentaje, asi_observacion', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('asi_codigo, ins_codigo, cur_codigo, asi_porcentaje, asi_observacion', 'safe', 'on'=>'search'),
+			array('asi_fecha, asi_asistencia', 'required'),
+			array('asi_fecha, asi_asistencia', 'required'),
+			array('ins_codigo, cur_codigo, asi_asistencia', 'numerical', 'integerOnly'=>true),
+			array('asi_observacion', 'length', 'max'=>100),
+			array('ins_codigo, cur_codigo, asi_observacion', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('asi_codigo, ins_codigo, cur_codigo, asi_fecha, asi_asistencia, asi_observacion', 'safe', 'on'=>'search'),
 		);
 	}
 
 	public function relations() {
 		return array(
-			'curCodigo' => array(self::BELONGS_TO, 'Cursos', 'cur_codigo'),
 			'insCodigo' => array(self::BELONGS_TO, 'Inscripcion', 'ins_codigo'),
+			'curCodigo' => array(self::BELONGS_TO, 'Cursos', 'cur_codigo'),
 		);
 	}
 
@@ -60,7 +61,8 @@ abstract class BaseAsistencia extends GxActiveRecord {
 			'asi_codigo' => Yii::t('app', 'Asi Codigo'),
 			'ins_codigo' => Yii::t('app', 'Ins Codigo'),
 			'cur_codigo' => Yii::t('app', 'Cur Codigo'),
-			'asi_porcentaje' => Yii::t('app', 'Asi Porcentaje'),
+			'asi_fecha' => Yii::t('app', 'Asi Fecha'),
+			'asi_asistencia' => Yii::t('app', 'Asi Asistencia'),
 			'asi_observacion' => Yii::t('app', 'Asi Observacion'),
 		);
 	}
@@ -71,7 +73,8 @@ abstract class BaseAsistencia extends GxActiveRecord {
 		$criteria->compare('asi_codigo', $this->asi_codigo);
 		$criteria->compare('ins_codigo', $this->ins_codigo);
 		$criteria->compare('cur_codigo', $this->cur_codigo);
-		$criteria->compare('asi_porcentaje', $this->asi_porcentaje, true);
+		$criteria->compare('asi_fecha', $this->asi_fecha, true);
+		$criteria->compare('asi_asistencia', $this->asi_asistencia);
 		$criteria->compare('asi_observacion', $this->asi_observacion, true);
 
 		return new CActiveDataProvider(get_class($this), array(

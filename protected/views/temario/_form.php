@@ -14,22 +14,29 @@
 
 	<?php echo $form->errorSummary($model); ?>
 	<div class="panel">
-		<div class="span-8 last">
+
+
+
+		<!-- <div class="span-8 last">
 		<?php echo $form->labelEx($model,'pla_codigo'); ?>
 		<?php echo $form->dropDownList($model, 'pla_codigo', GxHtml::listDataEx(Planificacion::model()->findAllAttributes(null, true))); ?>
 		<?php echo $form->error($model,'pla_codigo'); ?>
-		</div><!-- row -->
+		</div>
+
+
 		<div class="span-8 last">
 		<?php echo $form->labelEx($model,'doc_codigo'); ?>
 		<?php echo $form->dropDownList($model, 'doc_codigo', GxHtml::listDataEx(Docente::model()->findAllAttributes(null, true))); ?>
 		<?php echo $form->error($model,'doc_codigo'); ?>
-		</div><!-- row -->
+		</div>
 		<div class="span-8 last">
 		<?php echo $form->labelEx($model,'tem_nombre'); ?>
 		<?php echo $form->textField($model, 'tem_nombre', array('maxlength' => 100,'size' => 80)); ?>
 		<?php echo $form->error($model,'tem_nombre'); ?>
-		</div><!-- row -->
-		<div class="span-8 last">
+		</div> -->
+
+		
+		<div class="span-8 last">	
 		<?php echo $form->labelEx($model,'tem_fecha_inicio'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
@@ -59,11 +66,11 @@
 ; ?>
 		<?php echo $form->error($model,'tem_fecha_fin'); ?>
 		</div><!-- row -->
-                <div class="span-8 last">
+                <!-- <div class="span-8 last">
 		<?php echo $form->labelEx($model,'tem_valor_clases'); ?>
 		<?php echo $form->textField($model, 'tem_valor_clases', array('maxlength' => 10,'size' => 10)); ?>
 		<?php echo $form->error($model,'tem_valor_clases'); ?>
-                </div><!-- row -->
+                </div> -->
 	</div>
 <!-- june -->
 <div class="row"></div>

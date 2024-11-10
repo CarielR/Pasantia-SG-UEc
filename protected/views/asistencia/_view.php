@@ -10,8 +10,11 @@
 	<?php echo GxHtml::encode($data->getAttributeLabel('cur_codigo')); ?>:
 		<?php echo GxHtml::encode(GxHtml::valueEx($data->curCodigo)); ?>
 	<br />
-	<?php echo GxHtml::encode($data->getAttributeLabel('asi_porcentaje')); ?>:
-	<?php echo GxHtml::encode($data->asi_porcentaje); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('asi_fecha')); ?>:
+	<?php echo GxHtml::encode($data->asi_fecha); ?>
+	<br />
+	<?php echo GxHtml::encode($data->getAttributeLabel('asi_asistencia')); ?>:
+	<?php echo GxHtml::encode($data->asi_asistencia); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('asi_observacion')); ?>:
 	<?php echo GxHtml::encode($data->asi_observacion); ?>

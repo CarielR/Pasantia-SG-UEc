@@ -5,8 +5,8 @@ $this->breadcrumbs = array(
 );
 
 $this->menu = array(
-	array('label' => Yii::t('app', 'Listar') . ' Notas', 'url'=>array('index')),
-	array('label' => Yii::t('app', 'Crear') . ' Notas', 'url'=>array('create')),
+	array('label' => Yii::t('app', 'Listar') . ' Temario', 'url'=>array('/temario/adminTemario')),
+	array('label' => Yii::t('app', 'Gestionar') . ' Notas', 'url'=>array('adminNotas')),
 	array('label' => Yii::t('app', 'Ver') . ' Notas', 'url'=>array('view', 'id' => GxActiveRecord::extractPkValue($model, true))),
 	//array('label' => Yii::t('app', 'Gestionar') . ' Notas', 'url'=>array('admin')),
 );
@@ -15,6 +15,9 @@ $this->menu = array(
 <h1><?php echo Yii::t('app', 'Actualizar'); ?> Notas #<?php echo GxHtml::encode(GxHtml::valueEx($model)); ?></h1>
 
 <?php
-$this->renderPartial('_form', array(
-		'model' => $model));
+$this->renderPartial('adminNotas', array(
+		'model' => $model,
+		'resultado' => $resultado	
+	));
+
 ?>

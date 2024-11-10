@@ -7,14 +7,16 @@ class Asistencia extends BaseAsistencia
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
 	}
-        
-        public function attributeLabels() {
+
+	public function attributeLabels() {
 		return array(
-			'asi_codigo' => Yii::t('app', 'Codigo'),
-			'ins_codigo' => Yii::t('app', 'Inscripcion'),
+			'asi_codigo' => Yii::t('app', 'Codigo_asist'),
+			'ins_codigo' => Yii::t('app', 'Participante'),
 			'cur_codigo' => Yii::t('app', 'Curso'),
-			'asi_porcentaje' => Yii::t('app', 'Porcentaje'),
+			'asi_fecha' => Yii::t('app', 'Fecha'),
+			'asi_asistencia' => Yii::t('app', 'Asistencia'),
 			'asi_observacion' => Yii::t('app', 'Observacion'),
 		);
 	}
+
 }

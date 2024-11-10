@@ -55,7 +55,12 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 				'value'=>'GxHtml::valueEx($data->curCodigo)',
 				'filter'=>GxHtml::listDataEx(Cursos::model()->findAllAttributes(null, true)),
 				),
-		'asi_porcentaje',
+		'asi_fecha',
+		array(
+					'name' => 'asi_asistencia',
+					'value' => '($data->asi_asistencia === 0) ? Yii::t(\'app\', \'No\') : Yii::t(\'app\', \'Yes\')',
+					'filter' => array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')),
+					),
 		'asi_observacion',
 		array(
 			'class' => 'CButtonColumn',
