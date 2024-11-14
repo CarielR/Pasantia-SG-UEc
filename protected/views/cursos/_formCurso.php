@@ -27,12 +27,12 @@
 		<?php echo $form->error($model,'cur_nombre'); ?>
 		</div><!-- row -->
 		<div class="span-8 last">
-		<?php echo $form->labelEx($model,'cur_descripcion'); ?>
+		<!-- <?php echo $form->labelEx($model,'cur_descripcion'); ?>
 		<?php echo $form->textArea($model, 'cur_descripcion'); ?>
-		<?php echo $form->error($model,'cur_descripcion'); ?>
+		<?php echo $form->error($model,'cur_descripcion'); ?> -->
 		</div><!-- row -->
 		<div class="span-8 last">
-		<?php echo $form->labelEx($model,'cur_fecha_planificacion'); ?>
+		<!-- <?php echo $form->labelEx($model,'cur_fecha_planificacion'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
 			'attribute' => 'cur_fecha_planificacion',
@@ -44,7 +44,7 @@
 				),
 			));
 ; ?>
-		<?php echo $form->error($model,'cur_fecha_planificacion'); ?>
+		<?php echo $form->error($model,'cur_fecha_planificacion'); ?> -->
 		</div><!-- row -->
 		<div class="span-8 last">
 		<?php echo $form->labelEx($model,'cur_codigo_curso'); ?>
@@ -52,9 +52,9 @@
 		<?php echo $form->error($model,'cur_codigo_curso'); ?>
 		</div><!-- row -->
 		<div class="span-8 last">
-		<?php echo $form->labelEx($model,'cur_objetivo'); ?>
+		<!-- <?php echo $form->labelEx($model,'cur_objetivo'); ?>
 		<?php echo $form->textArea($model, 'cur_objetivo'); ?>
-		<?php echo $form->error($model,'cur_objetivo'); ?>
+		<?php echo $form->error($model,'cur_objetivo'); ?> -->
 		</div><!-- row -->
 		<div class="span-8 last">
 		<?php echo $form->labelEx($model,'cur_duracion'); ?>

@@ -10753,3 +10753,120 @@ REQUEST_URI=/sg-uec/index.php?r=asistencia/create&id=1
 in C:\xampp\htdocs\sg-uec\protected\views\asistencia\viewAsistencia.php (43)
 in C:\xampp\htdocs\sg-uec\protected\views\asistencia\create.php (19)
 in C:\xampp\htdocs\sg-uec\protected\controllers\AsistenciaController.php (88)
+2024/11/14 16:24:41 [error] [exception.CrugeException.500] el atributo authmode no esta definido como valido en config<br/>500
+REQUEST_URI=/sg-uec/index.php?r=site/login
+HTTP_REFERER=http://localhost/sg-uec/index.php?r=site/login
+---
+2024/11/14 16:25:52 [error] [exception.CrugeException.500] el atributo authmode no esta definido como valido en config<br/>500
+REQUEST_URI=/sg-uec/index.php?r=site/login
+HTTP_REFERER=http://localhost/sg-uec/index.php?r=site/login
+---
+2024/11/14 16:28:16 [error] [exception.CrugeException.500] el atributo authmode no esta definido como valido en config<br/>500
+REQUEST_URI=/sg-uec/index.php?r=site/login
+HTTP_REFERER=http://localhost/sg-uec/index.php?r=site/login
+---
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "0" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "1" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "2" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "3" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "4" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "5" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "6" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "7" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "8" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "9" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "10" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "11" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "12" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "13" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "14" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "15" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "16" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "17" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "18" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "19" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "20" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "21" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "22" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "23" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "24" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "25" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "26" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "27" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "28" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "29" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "30" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "31" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "32" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "33" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)
+2024/11/14 16:40:50 [warning] [application] Error al establecer unsafe al atributo "34" de "Cursos".
+in C:\xampp\htdocs\sg-uec\protected\controllers\NotasController.php (101)
+in C:\xampp\htdocs\sg-uec\index.php (13)

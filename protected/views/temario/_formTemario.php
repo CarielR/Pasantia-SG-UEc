@@ -101,7 +101,7 @@ $this->endWidget();
             <td align="center"><b>TEMA</b></td>
             <td align="center"><b>FEC. INICIO</b></td>
             <td align="center"><b>FEC. FIN</b></td>
-            <td align="center"><b>SUBTEMAS</b></td>
+            <!-- <td align="center"><b>SUBTEMAS</b></td> -->
             <td align="center"><b>ELIMINAR</b></td>
             <td></td>
 	</tr>
@@ -113,7 +113,7 @@ $this->endWidget();
         <td align="left"><?php echo $data['tema']?></td>
         <td align="left"><?php echo $data['fechaInicio']?></td>
         <td align="left"><?php echo $data['fechaFin']?></td>
-        <td align="center"><?php echo '<a href="/sg-uec/index.php?r=contenido/updateContenido&id='.$data['codigoTemario'].'"><img src="/sg-uec/images/new.png" width="16" height="16" alt="Agregar"> </img></a>';?></td>
+        <!-- <td align="center"><?php echo '<a href="/sg-uec/index.php?r=contenido/updateContenido&id='.$data['codigoTemario'].'"><img src="/sg-uec/images/new.png" width="16" height="16" alt="Agregar"> </img></a>';?></td> -->
         <td align="center"><?php echo '<a href="/sg-uec/index.php?r=temario/delete&id='.$data['codigoTemario'].'"><img src="/sg-uec/images/delete.png" width="16" height="16" alt="Borrar"> </img></a>';?></td>
     </tr>
   <?php }  ?>
